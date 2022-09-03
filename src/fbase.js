@@ -2,7 +2,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import "firebase/compat/storage";
-
+import "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyB4S_8p3bCsDwcUh-keh8rxYXQ7-Vil1Io",
   authDomain: "hoitter.firebaseapp.com",
@@ -14,4 +14,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+export const firebaseInstance = firebase;
 export const authService = firebase.auth();
+export const dbService = firebase.firestore();
+export const storageService = firebase.storage();
